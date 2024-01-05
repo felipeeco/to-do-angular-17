@@ -1,0 +1,31 @@
+<h1>{{welcome}}</h1>
+<ul>
+  <li *ngFor="let task of tasks()">{{task}}</li>
+</ul>
+<hr />
+<h2>{{ 'hola'.repeat(4) }}</h2>
+<p>la suma de 3 + 3 es {{ 3 + 3 }}</p>
+<p>Hi, my name is {{ name() }} I am {{ age }}</p>
+<hr />
+<img src="" value="Felipe" />
+<input type="text" [value]='name()'>
+<button (click)="clickHandler()">Haz click</button>
+<button (dblclick)="dobleClickHandler()">Haz click double</button>
+<input type="text" [value]="valueInput" (keydown)="keydownHandler($event)">
+<p>Hola este campo es: {{valueInput}}</p>
+<h1>Signal</h1>
+<input type="text" [value]='name()' (change)="changeName($event)">
+<hr>
+<h2>New sintaxis</h2>
+<input type="color" [formControl]="colorControl" />
+<p>color: {{ colorControl.value }}</p>
+<hr />
+<h2>Change css class</h2>
+<input type="text" [formControl]="nameControl" (change)="changeMessage($event)" /> <br>
+<p class="message-error-name" [class.message-error-name--actived]="nameControl.invalid" >Invalid name</p>
+<h1>Print for</h1>
+<ul>
+  @for(task of tasks(); track task) {
+    <li> {{ $index }} {{ task }}</li>
+  }
+</ul>

@@ -1,0 +1,30 @@
+.container {
+    padding: 3rem;
+}
+.box {
+    height: 10px;
+    display: block;
+    background-color: red;
+}
+.message-error {
+    background-color: red;
+    color: white;
+    opacity: 0;
+    transition: all linear .5s;
+}
+.message-error.show {
+    opacity: 1;
+}
+
+.message-error-name {
+    background-color: red;
+    color: white;
+    padding: 1rem;
+    opacity: 0;
+    transition: all ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.message-error-name--actived {
+    opacity: 1;
+}
